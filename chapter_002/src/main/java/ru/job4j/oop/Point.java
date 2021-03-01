@@ -1,4 +1,4 @@
-package ru.job4j.classes_and_objects;
+package ru.job4j.oop;
 
 import static java.lang.Math.sqrt;
 import static java.lang.Math.pow;
