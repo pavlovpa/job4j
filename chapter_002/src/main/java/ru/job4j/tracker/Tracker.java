@@ -19,6 +19,7 @@ public class Tracker {
         if (index == -1) {
             rsl = false;
         } else {
+            item.setId(id);
             items[index] = item;
         }
         return rsl;
@@ -30,7 +31,9 @@ public class Tracker {
         if (index == -1) {
             rsl = false;
         } else {
-            items[index] = null;
+            System.arraycopy(items, index + 1, items, index, items.length - size);
+            items[size - 1] = null;
+            size--;
         }
         return rsl;
     }
