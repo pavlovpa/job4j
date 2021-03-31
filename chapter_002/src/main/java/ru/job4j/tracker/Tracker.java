@@ -31,7 +31,7 @@ public class Tracker {
         if (index == -1) {
             rsl = false;
         } else {
-            System.arraycopy(items, index + 1, items, index, items.length - size);
+            System.arraycopy(items, index + 1, items, index, size - index - 1);
             items[size - 1] = null;
             size--;
         }
