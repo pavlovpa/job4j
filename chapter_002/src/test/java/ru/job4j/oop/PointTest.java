@@ -1,6 +1,7 @@
-package ru.job4j.oop;
+package test.java.ru.job4j.oop;
 
 import org.junit.Test;
+import ru.job4j.oop.Point;
 
 import static org.hamcrest.Matchers.closeTo;
 import static org.junit.Assert.assertThat;
@@ -11,7 +12,7 @@ public class PointTest {
         Point a = new Point(0, 10);
         Point b = new Point(0, 0);
         double rsl = b.distance(a);
-        assertThat(rsl, closeTo(10, 0.001));
+        Assert.assertThat(rsl, Matchers.closeTo(10, 0.001));
     }
 
     @Test
@@ -19,6 +20,6 @@ public class PointTest {
         Point a = new Point(0, 0, 0);
         Point b = new Point(4, 0, 0);
         double rsl = b.distance3d(a);
-        assertThat(rsl, closeTo(4, 0.001));
+        Assert.assertThat(rsl, Matchers.closeTo(4, 0.001));
     }
 }
